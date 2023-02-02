@@ -23,8 +23,8 @@ export default {
   components: { Coin },
   data() {
     return {
-      coinData: [] | null,
-    }
+      coinData: null,
+    };
   },
   async mounted() {
     const response = await fetch(
