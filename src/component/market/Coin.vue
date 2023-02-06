@@ -30,39 +30,30 @@
   </div>
   <MoreInfoModal
     v-if="showMore == true"
-    :key="this.name"
-    :name="this.name"
-    :symbol="this.symbol"
-    :price="this.price"
-    :volume="this.volume"
-    :marketCap="this.marketCap"
-    :priceChange="this.priceChange"
-    @setShowMoreToFalse="setShowMore"
+    :key="name"
+    :name="name"
+    :symbol="symbol"
+    :price="price"
+    :volume="volume"
+    :marketCap="marketCap"
+    :priceChange="priceChange"
+    @setShowMoreToFalse="setShowMoreToFalse"
   />
 </template>
-<script>
-import MoreInfoModal from "./MoreInfoModal.vue";
-export default {
-  name: "Coin",
-  components: { MoreInfoModal },
-  props: {
-    price: Number,
-    volume: Number,
-    image: String,
-    name: String,
-    symbol: String,
-    marketCap: Number,
-    priceChange: Number,
-  },
-  data() {
-    return {
-      showMore: false,
-    };
-  },
-  methods : {
-    setShowMore(){
-      this.showMore = false
-    }
-  }
+<script setup>
+import MoreInfoModal from "./MoreInfoModal";
+import { defineProps, ref } from "vue";
+defineProps({
+  name: String,
+  price: Number,
+  symbol: String,
+  marketCap: Number,
+  priceChange: Number,
+  image: String,
+  volume: Number,
+});
+const showMore = ref(false);
+const setShowMoreToFalse = () => {
+  showMore.value = false
 };
 </script>

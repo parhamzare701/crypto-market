@@ -1,61 +1,62 @@
 .coin {
-    width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &__row {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    height: 5rem;
+    border-bottom: 0.063rem solid #d7d7d7;
+    width: 90%;
 
-    &__row {
+    &__price {
       display: flex;
-      flex-direction: row;
-      justify-content: start;
-      align-items: center;
-      height: 5rem;
-      border-bottom: 0.063rem solid #d7d7d7;
-      width: 90%;
+      text-align: left;
+      justify-content: space-between;
+      min-width: 100%;
 
-      &__price {
-        display: flex;
-        text-align: left;
-        justify-content: space-between;
-        min-width: 100%;
+      &__name {
+        width: 6.8rem;
+        cursor: pointer;
+      }
 
-        &__name {
-          width: 6.8rem;
-          cursor: pointer;
+      &__img {
+        height: 1.8rem;
+        width: 1.8rem;
+        margin-right: .6rem;
+      }
+
+      &__symbol {
+        text-transform: uppercase;
+        width: 6.8rem;
+      }
+
+      &__amount {
+        width: 6.8rem;
+      }
+
+      &__volume {
+        width: 9.6rem;
+      }
+
+      &__marketcap {
+        width: 14.3rem;
+      }
+
+      &__percent {
+        width: 6.2rem;
+
+        &--red {
+          color: #f00606;
         }
-        &__img {
-          height: 1.8rem;
-          width: 1.8rem;
-          margin-right: .6rem;
-        }
 
-        &__symbol {
-          text-transform: uppercase;
-          width: 6.8rem;
-        }
-
-        &__amount {
-          width: 6.8rem;
-        }
-
-        &__volume {
-          width: 9.6rem;
-        }
-
-        &__marketcap {
-          width: 14.3rem;
-        }
-
-        &__percent {
-          width: 6.2rem;
-
-          &--red {
-            color: #f00606;
-          }
-
-          &--green {
-            color: #11d811;
-          }
+        &--green {
+          color: #11d811;
         }
       }
     }
   }
+}

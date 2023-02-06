@@ -23,8 +23,8 @@ $color-white: #ffffff;
   background-color: rgba(0, 0, 0, .8);
 
   &__container {
-    min-height: 65vh;
-    min-width: 90%;
+    padding: 2rem;
+    min-width: 70%;
     background-color: #fff;
     border-radius: .4rem;
     display: flex;
@@ -33,7 +33,6 @@ $color-white: #ffffff;
     gap: 1.3rem;
 
     &__name {
-      margin-top: 4rem;
       font-weight: 800;
       font-size: 1.7rem;
     }

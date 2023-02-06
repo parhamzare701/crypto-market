@@ -1,6 +1,13 @@
 <template>
   <div class="moreinfo" @click="$emit(`setShowMoreToFalse`)">
-    <div class="moreinfo__container" @click="(e)=>{e.stopPropagation()}">
+    <div
+      class="moreinfo__container"
+      @click="
+        (e) => {
+          e.stopPropagation();
+        }
+      "
+    >
       <span class="moreinfo__container__name">{{ name }}</span>
       <span class="moreinfo__container__symbol">{{
         symbol.toUpperCase()
@@ -40,21 +47,23 @@
           marketCap
         }}</span
       >
-      <button class="moreinfo__container__btn" @click="$emit(`setShowMoreToFalse`)">
+      <button
+        class="moreinfo__container__btn"
+        @click="$emit(`setShowMoreToFalse`)"
+      >
         Close
       </button>
     </div>
   </div>
 </template>
-<script>
-export default {
-  props: {
-    name: String,
-    price: Number,
-    symbol: String,
-    marketCap: Number,
-    volume: Number,
-    priceChange: Number,
-  }
-};
+<script setup>
+import { defineProps } from "vue";
+defineProps({
+  name: String,
+  price: Number,
+  symbol: String,
+  marketCap: Number,
+  volume: Number,
+  priceChange: Number,
+});
 </script>
