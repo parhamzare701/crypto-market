@@ -28,6 +28,3 @@ onMounted(async () => {
   coinData.value = json;
 });
 </script>
-<style lang="scss">
-  @import "../../style/main.scss"
-</style>

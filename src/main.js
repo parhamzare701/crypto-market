@@ -1,3 +1,4 @@
 import { createApp } from 'vue'
-import Market from './component/market/Market'
-createApp(Market).mount('.app');
+import App from '@/App'
+import router from "@/router/index"
+createApp(App).use(router).mount('.app');
