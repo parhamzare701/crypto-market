@@ -5,10 +5,12 @@
         @apply w-[93%] flex justify-center flex-col gap-[5rem];
 
         &__head {
-            @apply flex justify-between items-center flex-row mt-[2.5rem] gap-[5rem];
+            @apply flex justify-between items-center flex-row mt-[2.5rem] gap-[5rem]
+            max-md:flex-col;
 
             &__text {
-                @apply text-center flex items-center justify-center flex-col w-[45%] gap-[calc(.8rem+1.2vw)];
+                @apply text-center flex items-center justify-center flex-col w-[45%] gap-[calc(.8rem+1.2vw)]
+                max-md:w-[100%];
 
                 &--title {
                     @apply font-black text-[calc(1rem+1.7vw)];
@@ -20,7 +22,8 @@
             }
 
             &__image {
-                @apply w-[55%];
+                @apply w-[55%]
+                max-md:w-[100%];
             }
         }
 

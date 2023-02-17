@@ -5,7 +5,8 @@
     @apply flex flex-row justify-start items-center h-[5rem] w-[90%] border-b-[.063rem] border-stone-300;
 
     &__price {
-      @apply flex justify-between text-left min-w-[100%];
+      @apply flex justify-between text-left min-w-[100%]
+      max-xl:[&>*]:shrink-0 max-xl:flex overflow-x-scroll;
 
       &__name {
         @apply w-[6.8rem] cursor-pointer;

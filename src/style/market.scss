@@ -1,7 +1,8 @@
 .market {
     @apply min-h-[100vh] flex justify-center items-center bg-[#1a1a1c];
     &__container {
-      @apply flex items-center flex-col my-[3rem] min-h-[30vh] min-w-[80%] rounded-[.5rem] bg-[#fff];
+      @apply flex items-center flex-col my-[3rem] min-h-[30vh] min-w-[80%] rounded-[.5rem] bg-[#fff]
+      max-xl:w-[95%];
       &__title {
         @apply text-center my-[1rem] pb-[1rem] w-[100%] border-b-[.2rem] border-stone-500 text-[1.7rem] font-medium ;
       }
