@@ -1,107 +1,68 @@
 .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    @apply min-h-[100vh] flex items-center flex-col;
+
     &__container {
-        width: 95%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        gap: 5rem;
+        @apply w-[93%] flex justify-center flex-col gap-[5rem];
+
         &__head {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-direction: row;
-            margin-top: 2.5rem;
-            gap: 5rem;
+            @apply flex justify-between items-center flex-row mt-[2.5rem] gap-[5rem];
 
             &__text {
-                text-align: center;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: calc(.8rem + 1.2vw);
-                flex-direction: column;
-                width: 45%;
+                @apply text-center flex items-center justify-center flex-col w-[45%] gap-[calc(.8rem+1.2vw)];
 
                 &--title {
-                    font-size: calc(1rem + 1.7vw);
-                    font-weight: 900;
+                    @apply font-black text-[calc(1rem+1.7vw)];
                 }
 
                 &--description {
-                    font-size: calc(1rem + .5vw);
+                    @apply text-[calc(1rem+.5vw)];
                 }
             }
 
             &__image {
-                width: 55%;
+                @apply w-[55%];
             }
         }
 
         &__content {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            justify-content: space-evenly;
-            width: 100%;
-            margin-bottom: 3rem;
-            gap: 3rem;
+            @apply flex flex-wrap flex-row justify-evenly w-[100%] mb-[3rem] gap-[3rem];
+
             &__card {
-                width: 25rem;
-                padding: 1rem;
-                border-radius: .4rem;
-                justify-content: center;
-                background: rgb(244, 240, 240);
-                display: flex;
-                &__info {   
-                    width: 80%;
-                    display: flex;
-                    align-items: right;
-                    flex-direction: column;
-                    gap: .5rem;
+                @apply w-[25rem] p-[1rem] rounded-[.4rem] flex justify-center bg-[rgb(244,240,240)];
+                &--en{
+                    @apply text-left;
+                }
+                &--fa{
+                    @apply text-right;
+                }
+                &__info {
+                    @apply w-[80%] flex flex-col gap-[.5rem];
                     &__image {
-                        width: 100%;
-                        display: block;
+                        @apply w-[100%] block;
                     }
+
                     &__name {
-                        margin-top: 2rem;
-                        font-size: 1.2rem;
-                        font-weight: 700;
+                        @apply mt-[2rem] text-[1.2rem] font-bold;
                     }
 
                     &__job {
-                        font-size: .8rem;
-                        font-weight: 500;
-                        color: rgb(88, 88, 88);
+                        @apply text-[.8rem] font-medium text-[rgb(88,88,88)];
                     }
 
                     &__description {
-                        font-weight: 500;
+                        @apply font-medium;
                     }
 
                     &__email {
-                        font-weight: 500;
+                        @apply font-medium;
                     }
 
                     &__contact {
-                        padding: 1rem;
-                        background: #2e186a;
-                        color: #FFF;
-                        outline: none;
-                        border-radius: .4rem;
-                        border: .1rem solid #2e186a;
-                        cursor: pointer;
-                        font-size: .9rem;
-                        font-size: .9rem;
-
+                        @apply p-[1rem] bg-[#2e186a] text-[#fff]
+                        rounded-[.4rem] border-[.1rem] border-[#2e186a] cursor-pointer
+                        text-[.9rem];
                         &:hover {
-                            transition: .3s all ease-in-out;
-                            border: .1rem solid #2e186a;
-                            background: transparent;
-                            color: black;
+                            @apply  transition duration-[.3s] ease-in-out bg-[transparent] text-black border-[.1rem] border-[#2e186a];
                         }
                     }
                 }

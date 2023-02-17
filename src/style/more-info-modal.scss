@@ -1,45 +1,23 @@
 @mixin modalInfo {
-  font-weight: 530;
+  @apply font-medium;
 
   &__text {
-    font-weight: 600;
-    font-size: 1.3rem;
-    color: rgb(96, 93, 93);
+    @apply font-semibold text-[1.3rem] text-[rgb(96,93,93)];
+
   }
 }
-
-$color-blue: #007bff;
-$color-white: #ffffff;
-
 .moreinfo {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  width: 100%;
-  background-color: rgba(0, 0, 0, .8);
+  @apply fixed top-0 left-0 flex justify-center items-center min-h-[100vh] w-[100%] bg-[rgba(0,0,0,.8)];
 
   &__container {
-    padding: 2rem;
-    min-width: 70%;
-    background-color: #fff;
-    border-radius: .4rem;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 1.3rem;
+    @apply p-[2rem] min-w-[70%] bg-white rounded-[.4rem] flex items-center flex-col gap-[1.3rem];
 
     &__name {
-      font-weight: 800;
-      font-size: 1.7rem;
+      @apply text-[1.7rem] font-extrabold;
     }
 
     &__symbol {
-      font-weight: 600;
-      font-size: 1.2rem;
+      @apply font-semibold text-[1.2rem];
     }
 
     &__price {
@@ -58,28 +36,19 @@ $color-white: #ffffff;
       @include modalInfo();
 
       &--red {
-        color: #f00606;
+        @apply text-[#f00606];
       }
 
       &--green {
-        color: #11d811;
+        @apply text-[#11d811];
       }
     }
 
     &__btn {
-      width: 50%;
-      background: transparent;
-      color: #007bff;
-      font-size: 1.2rem;
-      padding: 1rem;
-      border: .1rem solid #007bff;
-      border-radius: .4rem;
-      cursor: pointer;
-
+      @apply min-w-[60%] bg-[transparent] text-[#007bff]
+      text-[1.2rem] p-[1rem] border-[.1rem] border-[#007bff] rounded-[.4rem] cursor-pointer max-md:w-[95%];
       &:hover {
-        transition: .3s all;
-        background: #007bff;
-        color: #fff;
+        @apply transition duration-[.3s] ease-in-out bg-[#007bff] text-white;
       }
     }
   }

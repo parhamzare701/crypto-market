@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Market from '@/component/market/Market'
-import About from '@/component/about/About'
+import Market from '@/pages/market/Market'
+import About from '@/pages/about/About'
 const routes = [
     {
         path: "/",

@@ -7,24 +7,24 @@
       }}</span>
       <span class="coin__row__price__symbol">{{ symbol }}</span>
       <span class="coin__row__price__amount"
-        >${{ price.toLocaleString() }}</span
+        >${{ Intl.NumberFormat($t('coinDataValues')).format(price) }}</span
       >
       <span class="coin__row__price__volume"
-        >${{ volume.toLocaleString() }}</span
+        >${{ Intl.NumberFormat($t('coinDataValues')).format(volume) }}</span
       >
       <span
         v-if="priceChange < 0"
         class="coin__row__price__percent--red coin__row__price__percent"
-        >{{ priceChange.toFixed(2) }}%</span
+        >{{Intl.NumberFormat($t('coinDataValues'), {style : 'percent', maximumFractionDigits: 2, minimumFractionDigits: 2}).format(priceChange / 100) }}</span
       >
       <span
         class="coin__row__price__percent--green coin__row__price__percent"
         v-else
-        >{{ Number(priceChange).toFixed(2) }}%</span
+        >{{ Intl.NumberFormat($t('coinDataValues'), {style : 'percent', maximumFractionDigits: 2, minimumFractionDigits: 2}).format(priceChange / 100)}}</span
       >
 
       <span class="coin__row__price__marketcap">
-        Mkt Cap: ${{ marketCap.toLocaleString() }}
+        Mkt Cap: ${{ Intl.NumberFormat($t('coinDataValues')).format(marketCap) }}
       </span>
     </div>
   </div>

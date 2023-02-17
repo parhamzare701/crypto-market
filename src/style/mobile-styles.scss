@@ -1,34 +1,37 @@
 @media (max-width: 72rem) {
   .coin__row__price {
-    width: 100%;
-    display: flex;
-    overflow-x: scroll;
-    overflow-y: hidden;
+    @apply w-[100%] flex overflow-x-scroll overflow-y-hidden;
 
     &::-webkit-scrollbar {
-      display: none;
+      @apply hidden;
     }
 
     >* {
-      flex-shrink: 0;
+      @apply shrink-0;
     }
   }
 
   .market__container {
-    width: 95%;
+    @apply w-[95%];
   }
 }
 
 @media (max-width: 50rem) {
   .about__container__head {
-    flex-direction: column;
+    @apply flex-col;
 
     &__text {
-      width: 100%;
+      @apply w-[100%];
     }
 
     &__image {
-      width: 100%;
+      @apply w-[100%];
     }
+  }
+}
+
+@media (max-width: 40rem) {
+  .moreinfo__container__btn {
+    @apply w-[95%];
   }
 }
