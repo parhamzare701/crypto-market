@@ -1,0 +1,15 @@
+.switcher {
+    @apply bg-none w-[100%] flex;
+    &--en{
+        @apply justify-end;
+    }
+    &--fa{
+        @apply justify-start;
+    }
+    &__btn {
+        @apply min-w-[3rem] bg-[#007bff] text-white border-[.1rem] border-[#007bff] rounded-sm uppercase;
+        &:hover{
+            @apply transition duration-[.3s] text-[#007bff] ease-out bg-transparent;
+        }
+    }
+}

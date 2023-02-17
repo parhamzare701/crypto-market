@@ -1,61 +1,49 @@
 .coin {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  @apply flex justify-center w-[100%];
 
-    &__row {
-      display: flex;
-      flex-direction: row;
-      justify-content: start;
-      align-items: center;
-      height: 5rem;
-      border-bottom: 0.063rem solid #d7d7d7;
-      width: 90%;
+  &__row {
+    @apply flex flex-row justify-start items-center h-[5rem] w-[90%] border-b-[.063rem] border-stone-300;
 
-      &__price {
-        display: flex;
-        text-align: left;
-        justify-content: space-between;
-        min-width: 100%;
+    &__price {
+      @apply flex justify-between text-left min-w-[100%]
+      max-xl:[&>*]:shrink-0 max-xl:overflow-x-scroll;
 
-        &__name {
-          width: 6.8rem;
-          cursor: pointer;
-        }
-        &__img {
-          height: 1.8rem;
-          width: 1.8rem;
-          margin-right: .6rem;
-        }
+      &__name {
+        @apply w-[6.8rem] cursor-pointer;
+      }
 
-        &__symbol {
-          text-transform: uppercase;
-          width: 6.8rem;
-        }
+      &__img {
+        @apply mr-[.6rem] h-[1.8rem] w-[1.8rem];
+      }
 
-        &__amount {
-          width: 6.8rem;
-        }
+      &__symbol {
+        @apply uppercase w-[6.8rem];
+      }
 
-        &__volume {
-          width: 9.6rem;
-        }
+      &__amount {
+        @apply w-[6.8rem];
+      }
 
-        &__marketcap {
-          width: 14.3rem;
+      &__volume {
+        @apply w-[9.8rem]
+      }
+
+      &__marketcap {
+        @apply w-[14.3rem];
+
+      }
+
+      &__percent {
+        @apply w-[6.2rem];
+
+        &--red {
+          @apply text-[#f00606];
         }
 
-        &__percent {
-          width: 6.2rem;
-
-          &--red {
-            color: #f00606;
-          }
-
-          &--green {
-            color: #11d811;
-          }
+        &--green {
+          @apply text-[#11d811];
         }
       }
     }
   }
+}

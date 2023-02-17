@@ -1,0 +1,18 @@
+.navbar {
+    @apply bg-white p-[0.7rem];
+    &__container {
+        @apply flex items-center justify-center flex-col;
+            &__company__name {
+                @apply text-black font-semibold text-[2rem];
+        }
+        &__links {
+            @apply mt-[.5rem];
+            &__link {
+                @apply m-[1rem] text-[1.1rem] text-[#6e6e6e];
+                &:hover {
+                    @apply text-black transition duration-[.3s] ease-out;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+@mixin modalInfo {
+  @apply font-medium;
+
+  &__text {
+    @apply font-semibold text-[1.3rem] text-[rgb(96,93,93)];
+
+  }
+}
+.moreinfo {
+  @apply fixed top-0 left-0 flex justify-center items-center min-h-[100vh] w-[100%] bg-[rgba(0,0,0,.8)];
+
+  &__container {
+    @apply p-[2rem] min-w-[70%] bg-white rounded-[.4rem] flex items-center flex-col gap-[1.3rem];
+
+    &__name {
+      @apply text-[1.7rem] font-extrabold;
+    }
+
+    &__symbol {
+      @apply font-semibold text-[1.2rem];
+    }
+
+    &__price {
+      @include modalInfo();
+    }
+
+    &__volume {
+      @include modalInfo();
+    }
+
+    &__marketcap {
+      @include modalInfo();
+    }
+
+    &__pricechange {
+      @include modalInfo();
+
+      &--red {
+        @apply text-[#f00606];
+      }
+
+      &--green {
+        @apply text-[#11d811];
+      }
+    }
+
+    &__btn {
+      @apply min-w-[60%] bg-[transparent] text-[#007bff]
+      text-[1.2rem] p-[1rem] border-[.1rem] border-[#007bff] rounded-[.4rem] cursor-pointer max-md:w-[95%];
+      &:hover {
+        @apply transition duration-[.3s] ease-in-out bg-[#007bff] text-white;
+      }
+    }
+  }
+}
